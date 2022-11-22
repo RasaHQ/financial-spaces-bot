@@ -1,0 +1,15 @@
+spaces:
+- name: main
+  data: main
+- name: transfer_money
+  data: transfer_money/
+  entry_intents:
+  - send_money
+- name: investment
+  data: investment/
+  entry_intents:
+    - buy_stock
+- name: pay_cc
+  data: pay_cc/
+  entry_intents:
+    - pay_cc

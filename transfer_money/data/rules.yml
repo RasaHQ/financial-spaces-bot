@@ -1,0 +1,50 @@
+version: "3.1"
+
+rules:
+- rule: is there a transfer charge
+  steps:
+  - intent: ask_transfer_charge
+  - action: utter_transfer_charge
+
+- rule: Show list of known recipients
+  steps:
+  - intent: check_recipients
+  - action: utter_recipients
+
+- rule: activate transfer_money when no other task is active
+  steps:
+  - intent: transfer_money
+  - action: form
+  - active_loop: form
+
+- rule: Submit transfer_money form
+  condition:
+  # Condition that form is active.
+  - active_loop: form
+  - slot_was_set:
+    - confirm_form: true
+  steps:
+  # Form is deactivated
+  - action: form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_transfer_successful
+  - action: utter_anything_else
+
+- rule: Cancel submit transfer_money form
+  condition:
+    # Condition that form is active.
+    - active_loop: form
+    - slot_was_set:
+      - confirm_form: false
+  steps:
+  # Form is deactivated
+  - action: form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_transfer_cancelled
+  - action: utter_anything_else

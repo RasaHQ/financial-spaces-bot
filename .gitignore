@@ -89,3 +89,4 @@ rasa/keys
 # Local Netlify folder
 .netlify
 rasa.code-workspace
+spaces/

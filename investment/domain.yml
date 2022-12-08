@@ -68,7 +68,7 @@ responses:
   utter_ask_form_share_count:
     - text: How many shares do you want to buy of {ticker}?
   utter_ask_form_limit_price:
-    - text: What's the limit price you want to buy {ticket} at?
+    - text: What's the limit price you want to buy {ticker} at?
   utter_commission_pricing:
     - text: Every order below 1000$ will cost you $1 and every order above $5.
 

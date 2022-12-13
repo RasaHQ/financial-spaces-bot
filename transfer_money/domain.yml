@@ -7,7 +7,6 @@ intents:
   - check_recipients
 
 entities:
-  - amount-of-money
   - person
 
 slots:

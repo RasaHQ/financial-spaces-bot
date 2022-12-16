@@ -29,7 +29,7 @@ nlu:
     - [TSLA](ticker)
     - [GOOG](ticker)
     - [200](amount-of-money)$
-    - [44.54](amount-of_money)$
+    - [44.54](amount-of-money)$
     - [10](amount-of-money) dollars
     - [13.3](amount-of-money) USD
     

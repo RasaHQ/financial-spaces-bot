@@ -10,23 +10,19 @@ spaces:
   - name: main
     domain: main/domain.yml
     nlu: main/nlu
-    stories: main/stories
   - name: transfer_money
     domain: transfer_money/domain.yml
     nlu: transfer_money/data/nlu.yml
-    stories: transfer_money/data/rules.yml
     entry_intents:
       - send_money
   - name: investment
     domain: investment/domain.yml
     nlu: investment/data/nlu.yml
-    stories: investment/data/rules.yml
     entry_intents:
       - buy_stock
   - name: pay_cc
     domain: pay_cc/domain.yml
     nlu: pay_cc/data/nlu.yml
-    stories: pay_cc/data/rules.yml
     entry_intents:
       - pay_cc
 

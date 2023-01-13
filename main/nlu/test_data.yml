@@ -1,0 +1,29 @@
+version: "3.1"
+nlu:
+- intent: deny
+  examples: |
+    - nope
+    - cancel
+    - no way
+- intent: bot_challenge
+  examples: |
+    - you are not a person, right?
+    - are you a bot?
+    - you don't sound like a person
+- intent: affirm
+  examples: |
+    - yes, why not
+    - that's okay
+    - indeed
+    - sounds good
+- intent: greet
+  examples: |
+    - hello there
+    - goodevening
+    - what's up?
+- intent: goodbye
+  examples: |
+    - have a nice day
+    - cee you later
+    - cu
+    - ciao

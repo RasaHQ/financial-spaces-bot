@@ -1,0 +1,44 @@
+version: "3.1"
+nlu:
+- intent: ask_comission_pricing
+  examples: |
+    - do I have to pay extra to buy stocks?
+    - how much of a cut do you take?
+    - does buying stock cost something?
+    - how much order fee do you have?
+    - if I place an order does that cost money?
+    - how much does an order take?
+    - is there an order fee to buy stocks?
+    - how much to place an order?
+    - is there an order fee?
+    - what's the transaction cost?
+    - what's the order fee?
+    - do I have to pay you to buy or sell stock?
+- intent: buy_stock
+  examples: |
+    - can I buy some stocks?
+    - I want to buy some securities.
+    - buy [GOOG](ticker)
+    - Buy [10](quantity) shares of [NFLX](ticker)
+    - I want to invest in [TSLA](ticker)
+    - can you help me invest in [GOOG](ticker)
+    - I want to acquire [50](quantity) shares of [F](ticker).
+    - I'd like to acquire [100](quantity) shares of [SHOP](ticker)
+    - I got some dry powder and I want to use it for buying some stocks.
+    - please place a limit order at [78.20](amount-of-money)$ to buy [50](quantity) shares of [GE](ticker)
+    - I heard [AAPL](ticker) is about to bounce, I want to buy some
+    - I'd like to buy some stocks again
+- intent: inform
+  examples: |
+    - [PFE](ticker)
+    - [GOOG](ticker)
+    - [1.23](amount-of-money)$
+    - [TSLA](ticker)
+    - [50](quantity) pieces
+    - [U](ticker)
+    - [44.54](amount-of-money)$
+    - [13.3](amount-of-money) USD
+    - [200](amount-of-money)$
+    - [10](amount-of-money) dollars
+    - [F](ticker)
+    - [AAPL](ticker)

@@ -1,0 +1,24 @@
+version: "3.1"
+nlu:
+- intent: pay_cc
+  examples: |
+    - Let's pay that credit card bill
+    - I want to pay my [current balance](amount-of-money-description) on my [embelm](credit_card) credit card
+    - I would also like to pay my [visa](credit_card) bill
+    - i wanna pay my credit card
+    - can I pay my card?
+    - I want to pay my [justice bank](credit_card) bill
+    - i would like to pay $[1200](amount-of-money) to my credit card
+    - I want to pay off my credit card
+- intent: inform
+  examples: |
+    - [justice bank](credit_card) credit card
+    - my [iron bank](credit_card) credit card
+    - [justice bank](credit_card) account
+    - I want to pay the [minimum balance](amount-of-money-description)
+    - my [emblem](credit_card) credit card
+    - the [current balance](amount-of-money-description)
+    - [american express](credit_card)
+    - my [iron bank](credit_card) card
+    - [full](amount-of-money-description)
+    - [mastercard](credit_card)

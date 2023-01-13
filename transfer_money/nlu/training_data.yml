@@ -1,0 +1,119 @@
+version: "3.1"
+nlu:
+- intent: ask_transfer_charge
+  examples: |
+    - whats the xfer price for this account
+    - if I send money to someone will I be charged extra for that?
+    - tell me about transfer fees
+    - Is there a charge
+    - do xfers cost something?
+    - what is the percentage fee for transactions to another person
+    - are you gonna bill me for this exchange
+    - is there a xfer fee
+    - is there a charge when I send money to someone
+    - how much is the fee to shift my money around
+    - what is the fee for sending money to someone else
+    - how much is the transfer fee
+    - Will I be charged for transferring money
+    - do transfers cost something?
+    - whats the cost of transferring money
+    - will i be charged for a transaction?
+    - is there a transfer charge?
+- intent: check_recipients
+  examples: |
+    - if I want to transfer money can i send it to anyone
+    - whats my recipient list
+    - show me my money sending list
+    - who can I pay?
+    - who can I transfer money to?
+    - Who is on your list?
+    - Show me my list of recipients
+    - Who is a valid payee
+    - can I send money to anyone?
+    - Show me people I can send money to
+    - Who can I transfer money to?
+    - Who all can I transfer money to?
+    - can I see the list of known recipients?
+    - who can I transfer money?
+    - tell me who I can share my money with
+    - who's in my recipient list?
+    - Who can I send money to?
+    - who exactly am I able to send money to
+- intent: inform
+  examples: |
+    - [Lisa Macintyre](person)
+    - to [Percy](person)
+    - [my wife](person)'s
+    - A friend.
+    - to [Percy Donald](person)
+    - to [Jane](person)
+    - $[100](amount-of-money)
+    - [Katy Parrow](person)
+    - $[10](amount-of-money)
+    - [anusha](person)
+    - [5000](amount-of-money)
+    - [Bob](person)
+    - [Percy](person) please
+    - to my [sister](person)
+    - [Imani](person)
+    - [Guangchen](person)
+    - [Laura Schilling](person)
+    - to [Darren Smith](person)
+    - [Alexandra](person)?
+    - [Kyle Gardner](person)
+    - [100](amount-of-money) dollars
+    - [cheng](person)
+    - [Claire](person)
+    - to [Sara](person)
+    - [percy donald](person)
+    - [John](person)
+    - [1000](amount-of-money) dollars
+    - [20](amount-of-money) bucks
+    - to my [brother](person)
+    - to [Karen Lancaster](person)
+    - [Melinda](person)
+    - [gary](person)
+    - [darnell](person)
+    - In that case, let's go with [Percy](person)
+- intent: transfer_money
+  examples: |
+    - Pay [Percy](person) $[50](amount-of-money)
+    - I want to transfer $[100](amount-of-money) to [Tommy](person)
+    - transfer $[60](amount-of-money) to [Sally](person)
+    - I need to transfer money to my grandma [Judith](person).
+    - i want to transfer $[100](amount-of-money) to my [daughter](person)
+    - send $[50](amount-of-money) to [john jacob](person)
+    - I need to transfer money to [Jeff](person), my son
+    - Ahh, okay so I want to make a transfer to [Bob](person).
+    - i want to transfer money please
+    - I want to pay [Bert](person)
+    - I want to pay someone
+    - I want to transfer money
+    - I would like to transfer money to [Philipp](person)
+    - need to transfer money
+    - transfer money to [ethan oswald](person)
+    - I need to make an urgent transfer to [Bob](person), can you do it?
+    - pay [Lisa](person) please
+    - pay [Mona](person) $[60](amount-of-money)
+    - I want to transfer $[100](amount-of-money) to [Bob](person)
+    - Please transfer [50](amount-of-money) dollars to [Andreas](person)
+    - i want to transfer money to [Latisha](person)
+    - I need to transfer money to my co-worker who paid for lunch
+    - can I transfer money to [Kyle Gardner](person)?
+    - Can I transfer money to a friend?
+    - I want to pay [Paula Handy](person)
+    - i want to transfer [$100](amount-of-money) to [Jane smith](person)
+    - i want to transfer [$400](amount-of-money) to [Akela](person)
+    - I need to send money to my kid
+    - i mean i want to transfer money
+    - II want to transfer to [Kelly](person)
+    - transfer money
+    - I'd like to send [50](amount-of-money)$ to [John](person)
+    - I would like to transfer [50](amount-of-money)$ to [Joschka](person)
+    - I want to pay [John](person)
+    - Ok pay [Emma](person)
+    - transfer $[60](amount-of-money) to [Jason Jacob](person)
+    - pay [Katy Parrow](person) $[40](amount-of-money) please
+    - can I pay someone
+    - Pay [Karen](person) [60](amount-of-money) euros
+    - pay [Emanual](person)

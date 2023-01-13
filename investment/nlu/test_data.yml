@@ -1,0 +1,17 @@
+version: "3.1"
+nlu:
+- intent: ask_comission_pricing
+  examples: |
+    - how much does it cost to buy or sell securities?
+    - are there any secondary costs?
+    - does it cost money to place an order?
+- intent: buy_stock
+  examples: |
+    - I want to buy some stocks
+    - can I buy some [META](ticker)?
+    - a friend of mine recommended [U](ticker), I want to buy [50](quantity) shares
+- intent: inform
+  examples: |
+    - [10](quantity) shares
+    - [20](quantity)
+    - [0.75](amount-of-money)$

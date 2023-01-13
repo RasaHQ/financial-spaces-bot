@@ -1,0 +1,79 @@
+version: "3.1"
+nlu:
+- intent: deny
+  examples: |
+    - never
+    - I don't want that
+    - don't like that
+    - don't do that
+    - n
+    - I don't think so
+    - no
+    - not really
+    - cancel please
+    - don't do it
+    - stop, no
+- intent: bot_challenge
+  examples: |
+    - you talk like a bot
+    - are you a machine?
+    - you are a bot, aren't you?
+    - am I just talking to a machine?
+    - am I talking to a bot?
+    - you talk like a machine
+    - am I talking to a human?
+    - am I talking to a person?
+    - you sound a lot like a bot
+    - are you a virtual assistant or a person?
+    - are you a human?
+    - can you tell me whether I am talking to a person?
+- intent: affirm
+  examples: |
+    - go ahead
+    - that's fine
+    - that would be great
+    - yes, please, go ahead
+    - correct
+    - of course
+    - yes please
+    - yup
+    - sure why not
+    - y
+    - sure
+    - yes
+    - that sounds good
+    - sure thing
+- intent: greet
+  examples: |
+    - hi, how are you?
+    - hey, how's it going?
+    - good day to you
+    - sup?
+    - good morning
+    - hi
+    - hey
+    - goodmorning
+    - let's go
+    - hey dude
+    - good evening
+    - hello
+    - moin
+    - good afternoon
+    - hey there
+- intent: goodbye
+  examples: |
+    - see ya
+    - goodbye
+    - good by
+    - bye then
+    - byebye
+    - see you
+    - bye bye
+    - laters
+    - bye my friend
+    - thanks bye
+    - see you later
+    - see you around
+    - good night
+    - bye
+    - catch you later

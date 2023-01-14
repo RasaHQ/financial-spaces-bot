@@ -11,7 +11,7 @@ nlu:
     - I want to pay my card
     - I want to pay my [MasterCard](credit_card) bill
     - I guess it is. Since it's so much, let's pay off my credit
-    - I want to pay $[500](amount-of-money) on my [emblem](credit_card) credit card on Sunday
+    - I want to pay $ [500](amount-of-money) on my [emblem](credit_card) credit card on Sunday
     - Please schedule  a payment towards my credit card for April 12th
     - I would like to pay the [minimum balance](amount-of-money-description) on my [emblem](credit_card) card
     - Pay off my [minimum balance](amount-of-money-description) please
@@ -40,7 +40,7 @@ nlu:
     - my [emblem](credit_card) card
     - I want to pay the [current balance](amount-of-money-description)
     - [current balance](amount-of-money-description)
-    - $[10](amount-of-money)
+    - $ [10](amount-of-money)
     - [visa](credit_card)
     - [1000](amount-of-money) dollars
     - [justice bank](credit_card)
@@ -48,7 +48,7 @@ nlu:
     - [iron bank](credit_card)
     - [emblem](credit_card)
     - towards my [justice bank](credit_card) card
-    - $[500](amount-of-money)
+    - $ [500](amount-of-money)
     - the [minimum balance](amount-of-money-description)
     - [Gringos](credit_card)
     - My [chase](credit_card)
@@ -68,9 +68,9 @@ nlu:
     - [emblem](credit_card) account
     - [minimum balance](amount-of-money-description)
     - towards my [emblem](credit_card) card
-    - $[100](amount-of-money)
+    - $ [100](amount-of-money)
     - my [rasa](credit_card) account
-    - $[500](amount-of-money)
+    - $ [500](amount-of-money)
     - My [Visa](credit_card) account
     - towards my [iron bank](credit_card) card
     - my [current balance](amount-of-money-description)

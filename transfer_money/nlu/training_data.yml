@@ -47,9 +47,9 @@ nlu:
     - A friend.
     - to [Percy Donald](person)
     - to [Jane](person)
-    - $[100](amount-of-money)
+    - $ [100](amount-of-money)
     - [Katy Parrow](person)
-    - $[10](amount-of-money)
+    - $ [10](amount-of-money)
     - [anusha](person)
     - [5000](amount-of-money)
     - [Bob](person)
@@ -77,12 +77,12 @@ nlu:
     - In that case, let's go with [Percy](person)
 - intent: transfer_money
   examples: |
-    - Pay [Percy](person) $[50](amount-of-money)
-    - I want to transfer $[100](amount-of-money) to [Tommy](person)
-    - transfer $[60](amount-of-money) to [Sally](person)
+    - Pay [Percy](person) $ [50](amount-of-money)
+    - I want to transfer $ [100](amount-of-money) to [Tommy](person)
+    - transfer $ [60](amount-of-money) to [Sally](person)
     - I need to transfer money to my grandma [Judith](person).
-    - i want to transfer $[100](amount-of-money) to my [daughter](person)
-    - send $[50](amount-of-money) to [john jacob](person)
+    - i want to transfer $ [100](amount-of-money) to my [daughter](person)
+    - send $ [50](amount-of-money) to [john jacob](person)
     - I need to transfer money to [Jeff](person), my son
     - Ahh, okay so I want to make a transfer to [Bob](person).
     - i want to transfer money please
@@ -94,8 +94,8 @@ nlu:
     - transfer money to [ethan oswald](person)
     - I need to make an urgent transfer to [Bob](person), can you do it?
     - pay [Lisa](person) please
-    - pay [Mona](person) $[60](amount-of-money)
-    - I want to transfer $[100](amount-of-money) to [Bob](person)
+    - pay [Mona](person) $ [60](amount-of-money)
+    - I want to transfer $ [100](amount-of-money) to [Bob](person)
     - Please transfer [50](amount-of-money) dollars to [Andreas](person)
     - i want to transfer money to [Latisha](person)
     - I need to transfer money to my co-worker who paid for lunch
@@ -112,8 +112,8 @@ nlu:
     - I would like to transfer [50](amount-of-money)$ to [Joschka](person)
     - I want to pay [John](person)
     - Ok pay [Emma](person)
-    - transfer $[60](amount-of-money) to [Jason Jacob](person)
-    - pay [Katy Parrow](person) $[40](amount-of-money) please
+    - transfer $ [60](amount-of-money) to [Jason Jacob](person)
+    - pay [Katy Parrow](person) $ [40](amount-of-money) please
     - can I pay someone
     - Pay [Karen](person) [60](amount-of-money) euros
     - pay [Emanual](person)

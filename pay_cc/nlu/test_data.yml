@@ -8,7 +8,7 @@ nlu:
     - i wanna pay my credit card
     - can I pay my card?
     - I want to pay my [justice bank](credit_card) bill
-    - i would like to pay $[1200](amount-of-money) to my credit card
+    - i would like to pay $ [1200](amount-of-money) to my credit card
     - I want to pay off my credit card
 - intent: inform
   examples: |

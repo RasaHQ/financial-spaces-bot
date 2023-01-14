@@ -51,6 +51,7 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
     entity_recognition: false
+    BILOU_flag: false
   - name: rasa_plus.spaces.components.filter_and_rerank.FilterAndRerank
   - name: FallbackClassifier
     threshold: 0.3

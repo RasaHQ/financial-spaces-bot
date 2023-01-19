@@ -50,6 +50,7 @@ pipeline:
   - name: rasa_plus.spaces.components.spaces_crf_entity_extractor.SpacesCRFEntityExtractor
   - name: DIETClassifier
     epochs: 100
+    ranking_length: 0
     entity_recognition: false
     BILOU_flag: false
   - name: rasa_plus.spaces.components.filter_and_rerank.FilterAndRerank

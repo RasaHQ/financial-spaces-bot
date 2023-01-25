@@ -16,7 +16,7 @@ spaces:
     nlu: transfer_money/nlu/training_data.yml
     nlu_test: transfer_money/nlu/test_data.yml
     entry_intents:
-      - send_money
+      - transfer_money
   - name: investment
     domain: investment/domain.yml
     nlu: investment/nlu/training_data.yml

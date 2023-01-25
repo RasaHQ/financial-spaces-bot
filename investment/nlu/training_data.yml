@@ -14,6 +14,10 @@ nlu:
     - what's the transaction cost?
     - what's the order fee?
     - do I have to pay you to buy or sell stock?
+    - is there a fee?
+    - how much do you charge per order?
+    - is there a charge when I buy some stocks?
+    - Will there be any additional costs for buying stocks?
 - intent: buy_stock
   examples: |
     - can I buy some stocks?

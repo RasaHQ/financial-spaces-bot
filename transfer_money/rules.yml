@@ -1,0 +1,35 @@
+version: "3.1"
+rules:
+  - rule: Submit transfer_money form
+    condition:
+    - active_loop: send_money_form
+    - slot_was_set:
+      - confirm_form: true
+    steps:
+    - action: send_money_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_transfer_successful
+
+  - rule: Cancel submit transfer_money form
+    condition:
+      - active_loop: send_money_form
+      - slot_was_set:
+        - confirm_form: false
+    steps:
+    - action: send_money_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_transfer_cancelled
+  
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Thank you
+    steps:
+      - intent: thankyou
+      - action: utter_noworries

@@ -12,6 +12,8 @@ spaces:
     nlu: main/nlu/training_data.yml
     nlu_test: main/nlu/test_data.yml
   - name: transfer_money
+    rules: transfer_money/rules.yml
+    stories: transfer_money/stories.yml
     domain: transfer_money/domain.yml
     nlu: transfer_money/nlu/training_data.yml
     nlu_test: transfer_money/nlu/test_data.yml

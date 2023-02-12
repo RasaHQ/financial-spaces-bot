@@ -5,8 +5,42 @@ intents:
   - inform
   - ask_transfer_charge
   - check_recipients
+  - greet
+  - thankyou
 
 entities:
   - person
+
+slots:
+  confirm_form:
+    type: bool
+    mappings:
+    - intent: affirm
+      type: from_intent
+      value: true
+      conditions:
+      - active_loop: form
+        requested_slot: confirm_form
+    - intent: deny
+      type: from_intent
+      value: false
+      conditions:
+      - active_loop: form
+        requested_slot: confirm_form
+
+responses:
+  utter_transfer_successful:
+  - text: "Transfer successful"
+  utter_transfer_cancelled:
+  - text: "Transfer cancelled"
+  utter_greet:
+  - text: "Hello"
+  utter_noworries:
+  - text: "No worries"
+
+forms:
+  send_money_form:
+    required_slots:
+      - confirm_form
 
 

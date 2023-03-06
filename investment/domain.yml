@@ -9,3 +9,11 @@ entities:
   - ticker
   - quantity
 
+responses:
+  utter_buystock:
+  - text: "Buy some stocks?"
+    buttons:
+    - title: "Default stocks"
+      payload: "/buy_stock"
+    - title: "Custom stocks"
+      payload: "/buy_stock{{'quantity': '10', 'ticker': 'AAPL'}}"

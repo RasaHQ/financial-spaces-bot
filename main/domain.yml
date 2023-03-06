@@ -10,3 +10,12 @@ intents:
 entities:
   - amount-of-money
 
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+    buttons:
+    - title: "great"
+      payload: "/greet"
+    - title: "super sad"
+      payload: "/goodbye"
+

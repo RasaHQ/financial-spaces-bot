@@ -118,6 +118,23 @@ nlu:
     - can I pay someone
     - Pay [Karen](person) [60](amount-of-money) euros
     - pay [Emanual](person)
+- intent: greet
+  examples: |
+    - hi, how are you?
+    - hey, how's it going?
+    - good day to you
+    - sup?
+    - good morning
+    - hi
+    - hey
+    - goodmorning
+    - let's go
+    - hey dude
+    - good evening
+    - hello
+    - moin
+    - good afternoon
+    - hey there
 
 rules:
 - rule: Submit transfer_money form

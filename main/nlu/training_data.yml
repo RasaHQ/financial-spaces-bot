@@ -77,3 +77,30 @@ nlu:
     - good night
     - bye
     - catch you later
+- intent: mood_great
+  examples: |
+    - perfect
+    - very good
+    - great
+    - I am feeling very good
+    - I am great
+
+rules:
+- rule: Greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_anything_else

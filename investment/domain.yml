@@ -13,7 +13,16 @@ responses:
   utter_buystock:
   - text: "Buy some stocks?"
     buttons:
-    - title: "Default stocks"
-      payload: "/buy_stock"
-    - title: "Custom stocks"
-      payload: "/buy_stock{{'quantity': '10', 'ticker': 'AAPL'}}"
+    - title: Default stocks
+      payload: '/buy_stock'
+    - title: Custom stocks
+      payload: '/buy_stock{{"quantity": "10", "ticker": "AAPL"}}'
+  utter_ask_comission_pricing:
+  - text: "Ask comission pricing?"
+    buttons:
+    - title: Default
+      payload: '/ask_comission_pricing'
+    - title: Custom
+      payload: '/ask_comission_pricing{{"ticker": "AAPL"}}'
+  utter_inform:
+  - text: "Stocks bought"

@@ -9,11 +9,11 @@ language: en
 spaces:
   - name: main
     domain: main/domain.yml
+    stories: main/nlu/training_data.yml
     nlu: main/nlu/training_data.yml
     nlu_test: main/nlu/test_data.yml
   - name: transfer_money
-    rules: transfer_money/rules.yml
-    stories: transfer_money/stories.yml
+    stories: transfer_money/nlu/training_data.yml
     domain: transfer_money/domain.yml
     nlu: transfer_money/nlu/training_data.yml
     nlu_test: transfer_money/nlu/test_data.yml
@@ -21,12 +21,14 @@ spaces:
       - transfer_money
   - name: investment
     domain: investment/domain.yml
+    stories: investment/stories.yml
     nlu: investment/nlu/training_data.yml
     nlu_test: investment/nlu/test_data.yml
     entry_intents:
       - buy_stock
   - name: pay_cc
     domain: pay_cc/domain.yml
+    stories: pay_cc/nlu/training_data.yml
     nlu: pay_cc/nlu/training_data.yml
     nlu_test: pay_cc/nlu/test_data.yml
     entry_intents:

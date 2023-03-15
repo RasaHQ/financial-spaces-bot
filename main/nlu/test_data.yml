@@ -27,3 +27,9 @@ nlu:
     - cee you later
     - cu
     - ciao
+
+rules:
+  - rule: Greet user
+    steps:
+    - intent: greet
+    - action: utter_greet

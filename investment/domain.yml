@@ -3,20 +3,14 @@ version: "3.1"
 intents:
   - buy_stock
   - ask_comission_pricing
-  - inform
+  - do_investment
 
 entities:
   - ticker
   - quantity
+  - investment_type
 
 responses:
-  utter_buystock:
-  - text: "Buy some stocks?"
-    buttons:
-    - title: Default stocks
-      payload: '/buy_stock'
-    - title: Custom stocks
-      payload: '/buy_stock{{"quantity": "10", "ticker": "AAPL"}}'
   utter_ask_comission_pricing:
   - text: "Ask comission pricing?"
     buttons:
@@ -24,5 +18,12 @@ responses:
       payload: '/ask_comission_pricing'
     - title: Custom
       payload: '/ask_comission_pricing{{"ticker": "AAPL"}}'
-  utter_inform:
-  - text: "Stocks bought"
+
+actions:
+  - action_do_investment
+
+slots:
+  display_options:
+    type: bool
+    mappings:
+    - type: custom

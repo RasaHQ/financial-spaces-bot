@@ -32,33 +32,57 @@ nlu:
     - please place a limit order at [78.20](amount-of-money)$ to buy [50](quantity) shares of [GE](ticker)
     - I heard [AAPL](ticker) is about to bounce, I want to buy some
     - I'd like to buy some stocks again
-- intent: inform
+- intent: do_investment
   examples: |
-    - [PFE](ticker)
-    - [GOOG](ticker)
-    - [1.23](amount-of-money)$
-    - [TSLA](ticker)
-    - [50](quantity) pieces
-    - [U](ticker)
-    - [44.54](amount-of-money)$
-    - [13.3](amount-of-money) USD
-    - [200](amount-of-money)$
-    - [10](amount-of-money) dollars
-    - [F](ticker)
-    - [AAPL](ticker)
+    - I want to know more investment options.
+    - I have some money to invest.
+    - Give me investment plans.
+    - I want to invest.
+    - I want to invest my money.
+    - I want to invest my money in [stocks](investment_type).
+    - I want to invest my money in [bonds](investment_type).
+    - I want to invest my money in [mutual funds](investment_type).
+    - I want to invest my money in [ETFs](investment_type).
+    - I want to invest my money in [futures](investment_type).
+    - I want to invest my money in [commodities](investment_type).
+    - I want to invest my money in [real estate](investment_type).
+    - I want to invest my money in [cryptocurrency](investment_type).
+    - I want to invest my money in [gold](investment_type).
+    - Show me investment options.
+    - Show me investment plans.
+    - Show me investment plans for [stocks](investment_type).
+    - Show me investment plans for [bonds](investment_type).
+    - Show me investment plans for [mutual funds](investment_type).
+    - Show me investment plans for [ETFs](investment_type).
+    - Show me investment plans for [futures](investment_type).
+    - Show me investment plans for [commodities](investment_type).
+    - Show me investment plans for [real estate](investment_type).
+    - Show me investment plans for [cryptocurrency](investment_type).
+    - Show me investment plans for [gold](investment_type).
+    - I want to know more about investment options.
+    - I want to know more about investment plans.
+    - I want to know more about investment plans for [stocks](investment_type).
+    - I want to know more about investment plans for [bonds](investment_type).
+    - I want to know more about investment plans for [mutual funds](investment_type).
+    - I want to know more about investment plans for [ETFs](investment_type).
+    - I want to know more about investment plans for [futures](investment_type).
+    - I want to know more about investment plans for [commodities](investment_type).
+    - I want to know more about investment plans for [real estate](investment_type).
+    - I want to know more about investment plans for [cryptocurrency](investment_type).
+    - I want to know more about investment plans for [gold](investment_type).
 
 rules:
-- rule: Say goodbye anytime the user says goodbye
+- rule: Ask comission pricing
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: ask_comission_pricing
+  - action: utter_ask_comission_pricing
 
 - rule: Buy some stocks
   steps:
   - intent: buy_stock
-  - action: utter_buystock
+  - action: action_do_investment
+
+- rule: Search for investment options
+  steps:
+  - intent: do_investment
+  - action: action_do_investment

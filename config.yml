@@ -1,70 +1,41 @@
-# The config recipe.
-# https://rasa.com/docs/rasa/model-configuration/
 recipe: default.v1
-
-# Configuration for Rasa NLU.
-# https://rasa.com/docs/rasa/nlu/components/
 language: en
-
 spaces:
-  - name: main
-    domain: main/domain.yml
-    stories: main/nlu/training_data.yml
-    nlu: main/nlu/training_data.yml
-    nlu_test: main/nlu/test_data.yml
-  - name: transfer_money
-    stories: transfer_money/nlu/training_data.yml
-    domain: transfer_money/domain.yml
-    nlu: transfer_money/nlu/training_data.yml
-    nlu_test: transfer_money/nlu/test_data.yml
-    entry_intents:
-      - greet
-  - name: investment
-    domain: investment/domain.yml
-    stories: investment/stories.yml
-    nlu: investment/nlu/training_data.yml
-    nlu_test: investment/nlu/test_data.yml
-    entry_intents:
-      - buy_stock
-  - name: pay_cc
-    domain: pay_cc/domain.yml
-    stories: pay_cc/nlu/training_data.yml
-    nlu: pay_cc/nlu/training_data.yml
-    nlu_test: pay_cc/nlu/test_data.yml
-    entry_intents:
-      - pay_cc
-
+- name: main
+  domain: main/domain.yml
+  stories: main/nlu/training_data.yml
+  nlu: main/nlu/training_data.yml
+  nlu_test: main/nlu/test_data.yml
+- name: investment
+  domain: investment/domain.yml
+  stories: investment/nlu/training_data.yml
+  nlu: investment/nlu/training_data.yml
+  nlu_test: investment/nlu/test_data.yml
+  entry_intents:
+  - buy_stock
 importers:
-  - name: "rasa_plus.spaces.space_data_importer.SpaceDataImporter"
-    # working directory is only needed for debugging purposes to have a stable tmpdir
-    temporary_working_directory: spaces
-
+- name: rasa_plus.spaces.space_data_importer.SpaceDataImporter
+  temporary_working_directory: spaces
 pipeline:
-  # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
-  # # If you'd like to customize it, uncomment and adjust the pipeline.
-  # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
-  - name: WhitespaceTokenizer
-  - name: RegexFeaturizer
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
-  - name: rasa_plus.spaces.components.spaces_crf_entity_extractor.SpacesCRFEntityExtractor
-  - name: DIETClassifier
-    epochs: 100
-    ranking_length: 0
-    entity_recognition: false
-    BILOU_flag: false
-  - name: rasa_plus.spaces.components.filter_and_rerank.FilterAndRerank
-  - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
-
-# Configuration for Rasa Core.
-# https://rasa.com/docs/rasa/core/policies/
-policies:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: rasa_plus.spaces.components.spaces_crf_entity_extractor.SpacesCRFEntityExtractor
+- name: DIETClassifier
+  epochs: 100
+  ranking_length: 0
+  entity_recognition: false
+  BILOU_flag: false
+- name: rasa_plus.spaces.components.filter_and_rerank.FilterAndRerank
+- name: FallbackClassifier
+  threshold: 0.3
+  ambiguity_threshold: 0.1
+policies: null
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
@@ -77,3 +48,4 @@ policies:
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
+assistant_id: 20230317-032933-unsorted-game

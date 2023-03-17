@@ -1,18 +1,14 @@
 version: "3.1"
 nlu:
-- intent: deny
+- intent: greet
   examples: |
-    - never
-    - I don't want that
-    - don't like that
-    - don't do that
-    - n
-    - I don't think so
-    - no
-    - not really
-    - cancel please
-    - don't do it
-    - stop, no
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - good day
 - intent: bot_challenge
   examples: |
     - you talk like a bot
@@ -27,80 +23,13 @@ nlu:
     - are you a virtual assistant or a person?
     - are you a human?
     - can you tell me whether I am talking to a person?
-- intent: affirm
-  examples: |
-    - go ahead
-    - that's fine
-    - that would be great
-    - yes, please, go ahead
-    - correct
-    - of course
-    - yes please
-    - yup
-    - sure why not
-    - y
-    - sure
-    - yes
-    - that sounds good
-    - sure thing
-- intent: greet
-  examples: |
-    - hi, how are you?
-    - hey, how's it going?
-    - good day to you
-    - sup?
-    - good morning
-    - hi
-    - hey
-    - goodmorning
-    - let's go
-    - hey dude
-    - good evening
-    - hello
-    - moin
-    - good afternoon
-    - hey there
-- intent: goodbye
-  examples: |
-    - see ya
-    - goodbye
-    - good by
-    - bye then
-    - byebye
-    - see you
-    - bye bye
-    - laters
-    - bye my friend
-    - thanks bye
-    - see you later
-    - see you around
-    - good night
-    - bye
-    - catch you later
-- intent: mood_great
-  examples: |
-    - perfect
-    - very good
-    - great
-    - I am feeling very good
-    - I am great
 
 rules:
 - rule: Greet user
   steps:
   - intent: greet
-  - action: utter_greet
-
-- rule: Say goodbye anytime the user says goodbye
+  - action: action_demo_greet
+- rule: Check if bot
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-stories:
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-  - action: utter_anything_else
+  - intent: bot_challenge
+  - action: utter_iamabot

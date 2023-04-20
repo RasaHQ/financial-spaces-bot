@@ -70,6 +70,11 @@ nlu:
     - I want to know more about investment plans for [real estate](investment_type).
     - I want to know more about investment plans for [cryptocurrency](investment_type).
     - I want to know more about investment plans for [gold](investment_type).
+- intent: financial_status
+  examples: |
+    - My name is [David](name). show my status?
+    - My name is [Charlie](name). show my financial status?
+    - My name is [Peter](name). what is my current financial status?
 
 rules:
 - rule: Ask comission pricing
@@ -86,3 +91,8 @@ rules:
   steps:
   - intent: do_investment
   - action: action_do_investment
+
+- rule: Show financial status
+  steps:
+  - intent: financial_status
+  - action: action_show_status

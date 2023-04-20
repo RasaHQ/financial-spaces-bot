@@ -9,6 +9,7 @@ entities:
   - ticker
   - quantity
   - investment_type
+  - name
 
 responses:
   utter_ask_comission_pricing:
@@ -18,12 +19,21 @@ responses:
       payload: '/ask_comission_pricing'
     - title: Custom
       payload: '/ask_comission_pricing{{"ticker": "AAPL"}}'
+  utter_financial_status:
+  - text: "Hello, {name}. Here is your financial status."
+  - text: "Hi, {name}. Here is your financial status."
 
 actions:
   - action_do_investment
+  - action_show_status
 
 slots:
   display_options:
     type: bool
     mappings:
     - type: custom
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name

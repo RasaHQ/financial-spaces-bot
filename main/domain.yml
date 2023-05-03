@@ -10,3 +10,14 @@ intents:
 entities:
   - amount-of-money
 
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+  utter_goodbye:
+    - text: "It was nice talking to you. See you soon."
+  utter_alrighty:
+    - text: "alrighty."
+  utter_i_am_a_bot:
+    - text: "Yes, I am a bot."
+  utter_anything_else:
+    - text: "Is there anything else I can do for you?"

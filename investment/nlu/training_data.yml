@@ -1,6 +1,6 @@
 version: "3.1"
 nlu:
-- intent: ask_comission_pricing
+- intent: ask_commission_pricing
   examples: |
     - do I have to pay extra to buy stocks?
     - how much of a cut do you take?
@@ -46,3 +46,4 @@ nlu:
     - [10](amount-of-money) dollars
     - [F](ticker)
     - [AAPL](ticker)
+    - [160](amount-of-money)$

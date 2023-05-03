@@ -2,10 +2,74 @@ version: "3.1"
 
 intents:
   - buy_stock
-  - ask_comission_pricing
+  - ask_commission_pricing
   - inform
 
 entities:
   - ticker
   - quantity
 
+slots:
+  ticker:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: ticker
+  limit_price:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: amount-of-money
+  share_count:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: quantity
+  confirm_form:
+    type: bool
+    mappings:
+    - intent: affirm
+      type: from_intent
+      value: true
+      conditions:
+      - active_loop: form
+        requested_slot: confirm_form
+    - intent: deny
+      type: from_intent
+      value: false
+      conditions:
+      - active_loop: form
+        requested_slot: confirm_form
+
+responses:
+  utter_ask_form_confirm_form:
+    - buttons:
+        - payload: /affirm
+          title: Yes
+        - payload: /deny
+          title: No, cancel the transaction
+      text: Would you like to place an order for {share_count} shares of {ticker} for {limit_price} USD each?
+  utter_stock_form_success:
+    - text: I have placed your order!
+  utter_stock_form_canceled:
+    - text: Your order was cancelled.
+  utter_ask_form_ticker:
+    - text: What's the ticker symbol of the stock you want to buy?
+  utter_ask_form_share_count:
+    - text: How many shares do you want to buy of {ticker}?
+  utter_ask_form_limit_price:
+    - text: What's the limit price you want to buy {ticker} at?
+  utter_commission_pricing:
+    - text: Every order below 1000$ will cost you $1 and every order above $5.
+
+forms:
+  form:
+    ignored_intents: []
+    required_slots:
+    - ticker
+    - share_count
+    - limit_price
+    - confirm_form

@@ -1,0 +1,46 @@
+version: "3.1"
+
+rules:
+- rule: answer ask commission pricing
+  steps:
+  - intent: ask_commission_pricing
+  - action: utter_commission_pricing
+
+- rule: activate buy stocks process
+  steps:
+  - intent: buy_stock
+  - action: form
+  - active_loop: form
+
+
+- rule: Submit stock form
+  condition:
+  # Condition that form is active.
+  - active_loop: form
+  - slot_was_set:
+    - confirm_form: true
+  steps:
+  # Form is deactivated
+  - action: form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_stock_form_success
+  - action: utter_anything_else
+
+- rule: Cancel submit stock form
+  condition:
+    # Condition that form is active.
+    - active_loop: form
+    - slot_was_set:
+      - confirm_form: false
+  steps:
+  # Form is deactivated
+  - action: form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_stock_form_canceled
+  - action: utter_anything_else

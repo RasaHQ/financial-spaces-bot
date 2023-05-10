@@ -9,6 +9,7 @@ intents:
 
 entities:
   - amount-of-money
+  - machine-type
 
 responses:
   utter_greet:

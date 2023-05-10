@@ -52,6 +52,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: rasa_plus.spaces.components.spaces_crf_entity_extractor.SpacesCRFEntityExtractor
+  - name: EntitySynonymMapper
   - name: DIETClassifier
     epochs: 100
     ranking_length: 0

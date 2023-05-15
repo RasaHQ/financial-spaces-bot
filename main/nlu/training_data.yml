@@ -1,5 +1,9 @@
 version: "3.1"
 nlu:
+- lookup: weather_when
+  examples: |
+    - tomorrow
+    - next week
 - intent: deny
   examples: |
     - never
@@ -78,6 +82,10 @@ nlu:
     - good night
     - bye
     - catch you later
+- intent: ask_weather
+  examples: |
+    - Do you know about the weather [tomorrow]{"entity": "weather_when", "value": "weather_when"}?
+    - What's the weather [next week]{"entity": "weather_when", "value": "weather_when"}?
 
 - synonym: bot
   examples: |

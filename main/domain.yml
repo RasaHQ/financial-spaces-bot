@@ -6,10 +6,20 @@ intents:
   - affirm
   - deny
   - bot_challenge
+  - ask_weather
 
 entities:
   - amount-of-money
+  - weather_when
   - machine-type
+
+slots:
+  weather_when:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: weather_when
 
 responses:
   utter_greet:
@@ -22,3 +32,5 @@ responses:
     - text: "Yes, I am a bot."
   utter_anything_else:
     - text: "Is there anything else I can do for you?"
+  utter_weather:
+    - text: "I have no idea about the weather {weather_when}, sorry"

@@ -47,3 +47,4 @@ nlu:
     - [F](ticker)
     - [AAPL](ticker)
     - [160](amount-of-money)$
+    - [20](quantity) shares

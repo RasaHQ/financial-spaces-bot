@@ -19,17 +19,18 @@ nlu:
     - stop, no
 - intent: bot_challenge
   examples: |
-    - you talk like a bot
-    - are you a machine?
+    - you talk like a [bot](machine-type)
+    - are you a [machine](machine-type)?
+    - are you an [AI](machine-type)?
     - you are a bot, aren't you?
     - am I just talking to a machine?
     - am I talking to a bot?
     - you talk like a machine
-    - am I talking to a human?
-    - am I talking to a person?
+    - am I talking to a [human](machine-type)?
+    - am I talking to a [person](machine-type)?
     - you sound a lot like a bot
     - are you a virtual assistant or a person?
-    - are you a human?
+    - are you a [human being](machine-type)?
     - can you tell me whether I am talking to a person?
 - intent: affirm
   examples: |
@@ -85,3 +86,14 @@ nlu:
   examples: |
     - Do you know about the weather [tomorrow]{"entity": "weather_when", "value": "weather_when"}?
     - What's the weather [next week]{"entity": "weather_when", "value": "weather_when"}?
+
+- synonym: bot
+  examples: |
+    - assitant
+    - AI
+
+- synonym: person
+  examples: |
+    - person
+    - human
+    - human being

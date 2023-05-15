@@ -11,6 +11,7 @@ intents:
 entities:
   - amount-of-money
   - weather_when
+  - machine-type
 
 slots:
   weather_when:

@@ -10,6 +10,8 @@ nlu:
     - Pay off my credit card, please
     - I want to pay my card
     - I want to pay my [MasterCard](credit_card) bill
+    - I want to pay my [Master Card](credit_card) bill
+    - I want to pay my [MC](credit_card) bill
     - I guess it is. Since it's so much, let's pay off my credit
     - I want to pay $ [500](amount-of-money) on my [emblem](credit_card) credit card on Sunday
     - Please schedule  a payment towards my credit card for April 12th
@@ -24,6 +26,9 @@ nlu:
     - Can I schedule a payment towards my credit card for tomorrow?
     - i need to pay off my [emblm](credit_card) credit card
     - I want to pay my [iron bank](credit_card) bill
+    - I want to pay my [ironbank](credit_card) bill
+    - I want to pay my [Ibank](credit_card) bill
+    - I want to pay my [IB](credit_card) bill
     - pay a bill
     - i want to pay off my credit card
     - I want to pay [100](amount-of-money) dollars toward my [Emblem](credit_card) card, tomorrow
@@ -74,3 +79,14 @@ nlu:
     - My [Visa](credit_card) account
     - towards my [iron bank](credit_card) card
     - my [current balance](amount-of-money-description)
+
+- synonym: mastercard
+  examples: |
+    - master card
+    - MC
+
+- synonym: ironbank
+  examples: |
+    - iron bank
+    - IBank
+    - IB

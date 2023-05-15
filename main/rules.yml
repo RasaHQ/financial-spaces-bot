@@ -13,3 +13,7 @@ rules:
   steps:
     - intent: bot_challenge
     - action: utter_i_am_a_bot
+- rule: weather
+  steps:
+    - intent: ask_weather
+    - action: utter_weather

@@ -11,26 +11,26 @@ spaces:
     domain: main/domain.yml
     nlu: main/nlu/training_data.yml
     nlu_test: main/nlu/test_data.yml
-    stories: main/rules.yml
+    rules: main/rules.yml
   - name: transfer_money
     domain: transfer_money/domain.yml
     nlu: transfer_money/nlu/training_data.yml
     nlu_test: transfer_money/nlu/test_data.yml
-    stories: transfer_money/rules.yml
+    rules: transfer_money/rules.yml
     entry_intents:
       - transfer_money
   - name: investment
     domain: investment/domain.yml
     nlu: investment/nlu/training_data.yml
     nlu_test: investment/nlu/test_data.yml
-    stories: investment/rules.yml
+    rules: investment/rules.yml
     entry_intents:
       - buy_stock
   - name: pay_cc
     domain: pay_cc/domain.yml
     nlu: pay_cc/nlu/training_data.yml
     nlu_test: pay_cc/nlu/test_data.yml
-    stories: pay_cc/rules.yml
+    rules: pay_cc/rules.yml
     entry_intents:
       - pay_cc
 
